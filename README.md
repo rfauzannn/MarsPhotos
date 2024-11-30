@@ -1,38 +1,22 @@
-Mars Photos
+ Mars Photos 
 ==================================
 
-Mars Photos app is a demo app that shows actual images of Mars' surface. These images are
-real-life photos from Mars captured by NASA's Mars rovers. The data is stored on a Web server
-as a REST web service.
+Aplikasi Mars Photos adalah aplikasi demo yang menampilkan gambar sebenarnya dari permukaan Mars. Gambar-gambar ini adalah
+foto kehidupan nyata dari Mars yang diambil oleh penjelajah Mars NASA. Data disimpan di server Web
+sebagai layanan web REST.
 
-This app demonstrated the use of [Retrofit](https://square.github.io/retrofit/) to make REST requests to the web service, [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) to
-handle the deserialization of the returned JSON to Kotlin data objects, and [Coil](https://coil-kt.github.io/coil/) to load images by URL.
 
-Pre-requisites
---------------
+### Mendapatkan Data dari Internet
+Proyek di tahap ini (repo-starter) bertujuan untuk mengajarkan dasar pengambilan data dari API. Langkah-langkahnya melibatkan konfigurasi endpoint API, membuat antarmuka untuk mendefinisikan permintaan HTTP, serta mendeserialisasi respons JSON menjadi objek data Kotlin. Data yang diterima dari internet kemudian diproses untuk digunakan dalam aplikasi. Tahap ini fokus pada memahami konsep dasar komunikasi jaringan dalam aplikasi Android.
 
-You need to know:
-- How to create Composable functions.
-- How to use architecture components including ViewModel.
-- How to use coroutines for long-running tasks.
-- Familiarity with lazy grid
+### Menambahkan repositori dan DI Manual
+Pada tahap ini (coil-starter), proyek melanjutkan pengembangan dengan menambahkan layer repositori untuk memisahkan logika pengambilan data dari komponen UI, seperti ViewModel. Anda akan belajar membuat repositori yang bertugas menangani semua interaksi dengan API dan menyediakannya sebagai dependensi ke ViewModel menggunakan Dependency Injection (DI) Manual. Teknik ini membantu menciptakan kode yang lebih modular, terstruktur, dan fleksibel untuk pengembangan aplikasi skala besar. Fokus utama tahap ini adalah mengajarkan arsitektur aplikasi yang lebih baik, di mana setiap komponen memiliki tanggung jawab yang jelas.
 
-Getting Started
----------------
+### Memuat dan menampilkan gambar dari internet
+Tahap terakhir (main) melibatkan pengintegrasian library Coil (Coroutine Image Loader) untuk memuat dan menampilkan gambar dari internet dengan efisien. Langkah-langkah mencakup konfigurasi Coil untuk menampilkan foto Mars yang diambil dari API langsung di antarmuka pengguna. Library ini mendukung Jetpack Compose dan memungkinkan pengelolaan cache, placeholder, serta pemuatan gambar secara dinamis. Fokus tahap ini adalah menciptakan pengalaman pengguna yang mulus dan profesional dengan menampilkan elemen visual langsung dari sumber jaringan.
 
-1. [Install Android Studio](https://developer.android.com/studio/install.html), if you don't already
-   have it.
-2. Download the sample.
-3. Import the sample into Android Studio.
-4. Build and run the sample.
+### Preview
+![Screenshot_2024-11-30-09-24-56-78_a309694de1f2fbf3c0e5f24526b7d325](https://github.com/user-attachments/assets/930fad66-0fa9-49f3-89be-3471cc7a9d5f)
 
-## [Build this app through hands-on codelabs in the Android Basics with Compose Course](https://developer.android.com/courses/android-basics-compose/course)
+![Screenshot_2024-11-30-10-10-24-25_a309694de1f2fbf3c0e5f24526b7d325](https://github.com/user-attachments/assets/b8be1546-c6de-48b2-8557-fac44ff90016)
 
-### [Get data from the internet](https://developer.android.com/codelabs/basic-android-kotlin-compose-getting-data-internet)
-Learn how to use community-developed libraries to connect to a web service to retrieve and display data in your Android Kotlin compose app. 
-
-### [Add repository and Manual DI](https://developer.android.com/codelabs/basic-android-kotlin-compose-add-repository)
-Learn how to improve the architecture of the app by separating the network calls into a repository.
-
-### [Load and display images from the internet](https://developer.android.com/codelabs/basic-android-kotlin-compose-load-images)
-Use the Coil library to load and display photos from the internet in your Android Compose app. 
